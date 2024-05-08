@@ -10,13 +10,66 @@ const MainChatScreen = ({ navigation }) => {
       lastName: "Doe",
       lastMessage: "Hello",
       time: "10:00 AM",
+      conversation: [
+        {
+          id: 1,
+          sender: "John",
+          message: "Hey, how are you?",
+          isSender: false,
+          time: "10:05 AM",
+        },
+        {
+          id: 2,
+          sender: "You",
+          message: "I'm good, thanks!",
+          isSender: true,
+          time: "10:10 AM",
+        },
+        {
+          id: 3,
+          sender: "John",
+          message: "Great to hear!",
+          isSender: false,
+          time: "10:15 AM",
+        },
+      ],
     },
     {
       id: 2,
       firstName: "Jane",
       lastName: "Smith",
-      lastMessage: "How are you?",
+      lastMessage: "How's it going?",
       time: "11:30 AM",
+      conversation: [
+        {
+          id: 1,
+          sender: "Jane",
+          message: "Hey there!",
+          isSender: false,
+          time: "11:35 AM",
+        },
+        {
+          id: 2,
+          sender: "You",
+          message: "Doing well, thanks!",
+          isSender: true,
+          time: "11:40 AM",
+        },
+        {
+          id: 3,
+          sender: "Jane",
+          message: "Good to hear!",
+          isSender: false,
+          time: "11:45 AM",
+        },
+        {
+          id: 4,
+          sender: "Jane",
+          message: "How's it going?",
+          isSender: false,
+          time: "11:50 AM",
+        },
+      ],
     },
     {
       id: 3,
@@ -24,20 +77,22 @@ const MainChatScreen = ({ navigation }) => {
       lastName: "Johnson",
       lastMessage: "Good morning",
       time: "Yesterday",
-    },
-    {
-      id: 4,
-      firstName: "Bob",
-      lastName: "Brown",
-      lastMessage: "See you later",
-      time: "Yesterday",
-    },
-    {
-      id: 5,
-      firstName: "Alice R",
-      lastName: "Johnson",
-      lastMessage: "Good Morning",
-      time: "just now",
+      conversation: [
+        {
+          id: 1,
+          sender: "Alice",
+          message: "Good morning!",
+          isSender: false,
+          time: "9:00 AM",
+        },
+        {
+          id: 2,
+          sender: "You",
+          message: "Morning!",
+          isSender: true,
+          time: "9:05 AM",
+        },
+      ],
     },
   ];
 
@@ -213,23 +268,6 @@ const styles = StyleSheet.create({
   },
   activeNavItem: {
     color: "#25D366",
-  },
-  title: {
-    fontSize: 24,
-    fontWeight: "bold",
-    marginBottom: 20,
-    textAlign: "center",
-  },
-  logoutButton: {
-    backgroundColor: "#25D366",
-    paddingVertical: 10,
-    paddingHorizontal: 20,
-    borderRadius: 5,
-    alignSelf: "center",
-  },
-  logoutButtonText: {
-    color: "#fff",
-    fontWeight: "bold",
   },
 });
 
